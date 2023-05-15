@@ -9,12 +9,12 @@ namespace addressbook_tests_autoit
         public static string WIN_TITLE = "Free Address Book";
         public ApplicationManager() 
         {
-            groupHelper = new GroupHelper(this);
             auto = new AutoItX3();
             auto.Run(@"c:\FreeAddressBookPortable\AddressBook.exe");
             auto.WinWait(WIN_TITLE);
             auto.WinActivate(WIN_TITLE);
             auto.WinWaitActive(WIN_TITLE);
+            groupHelper = new GroupHelper(this);
         }
         public AutoItX3 Auto
         {

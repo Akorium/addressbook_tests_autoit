@@ -6,13 +6,13 @@ namespace addressbook_tests_autoit
     {
         public ApplicationManager application;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
 
         public void InitApplication()
         {
             application = new ApplicationManager();
         }
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void TearDownApplication()
         {
             application.Stop();
